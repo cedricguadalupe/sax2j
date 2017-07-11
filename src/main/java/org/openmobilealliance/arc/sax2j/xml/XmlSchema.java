@@ -35,15 +35,6 @@ public class XmlSchema
   private ProgressWriter mProgress = new ProgressWriter.NullProgressWriter();
 
   /**
-   * The resolver we use.
-   */
-  private final Resolver mResolver = new Resolver();
-  {
-    mResolver.setRetrievalEnabled(true);
-    mResolver.setProgressWriter(mProgress);
-  }
-
-  /**
    * The file to parse.
    */
   private final File mSchemaFile;
@@ -85,7 +76,6 @@ public class XmlSchema
     SchemaFactory lFactory = SchemaFactory.newInstance(lSchemaLanguage);
     mProgress.log("Using XML Schema " + (sUseXsd11 ? "1.1" : "1.0") +
                   " to parse " + mSchemaFile);
-    lFactory.setResourceResolver(mResolver);
     Source lSchemaSource = new StreamSource(mSchemaFile);
     mSchema = lFactory.newSchema(lSchemaSource);
     mProgress.log("Parsed schema " + mSchemaFile);

@@ -242,7 +242,7 @@ public class Translator
   /**
    * Is it possible for this element to occur more than once within its
    * enclosing type?
-   * @param xiElement
+   * @param xiDecl
    * @return
    */
   private static boolean isElementMultiValued(XSElementDeclaration xiDecl)

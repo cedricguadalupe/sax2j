@@ -100,8 +100,7 @@
       <xsd:documentation>This schema defines the XML data types for the RESTful Network API for Network Message Storage.</xsd:documentation>
    </xsd:annotation>
 
-   <xsd:import namespace="urn:oma:xml:rest:netapi:common:1"
-	schemaLocation="http://www.openmobilealliance.org/tech/profiles/rest_netapi_common-v1_0.xsd" />
+   <xsd:import namespace="urn:oma:xml:rest:netapi:common:1" />
 
 	<!-- ============================================ -->
 	<!--    Object & Folder Data type definitions     -->
@@ -382,7 +381,8 @@
      	   <xsd:element name="changedObject" type="ChangedObject" maxOccurs="1" minOccurs="1" />
      	   <xsd:element name="changedFolder" type="ChangedFolder" maxOccurs="1" minOccurs="1" />
 	   <xsd:element name="resetBox" type="ResetBox" maxOccurs="1" minOccurs="1" />
-     	</xsd:choice>
+     	</xsd:choice>
+
      </xsd:sequence>
    </xsd:complexType>
 

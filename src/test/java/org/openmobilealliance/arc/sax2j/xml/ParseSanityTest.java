@@ -37,7 +37,7 @@ public class ParseSanityTest
   @Test
   public void testCantParseSchemaTwice() throws Exception
   {
-    XmlSchema lSchema = new XmlSchema(new File("testdata/schemas",
+    XmlSchema lSchema = new XmlSchema(new File("src/test/resources/schemas",
                                                "simple1.xsd"));
     lSchema.parse();
     try
@@ -54,10 +54,10 @@ public class ParseSanityTest
   @Test
   public void testCantParseDocTwice() throws Exception
   {
-    XmlSchema lSchema = new XmlSchema(new File("testdata/schemas",
+    XmlSchema lSchema = new XmlSchema(new File("src/test/resources/schemas",
                                                "simple1.xsd"));
     lSchema.parse();
-    XmlDocument lDoc = new XmlDocument(lSchema, new File("testdata/xmldocs",
+    XmlDocument lDoc = new XmlDocument(lSchema, new File("src/test/resources/xmldocs",
         "simple1-ok.xml"));
 
     lDoc.parse();
